@@ -1,6 +1,6 @@
 class Book
   @@all = []
-  attr_accessor :title
+  attr_accessor :title, :author
 
   def initialize(title)
     @title = title
@@ -21,7 +21,7 @@ class Book
   # @book.save
   def save
     @@all << self
-    true
+    self
   end
 
   # Book.all
