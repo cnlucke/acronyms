@@ -11,5 +11,14 @@ u2 = User.new("coffee_mom")
 u2.tweet("coffee is great")
 u2.tweet("we coffee")
 
+# 
+# users.each |user_hash|
+#   user_hash
+# end
+#
+# users.each |user_object|
+#   user_object.get_tweets
+# end
+
 
 Pry.start

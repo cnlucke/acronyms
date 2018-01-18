@@ -13,6 +13,8 @@ class User
     Tweet.new(text, @username)
   end
 
+
+
   def get_tweets
     Tweet.all.select do |t|
       @username == t.username
