@@ -1,3 +1,4 @@
+
 class Tweet
   attr_accessor :text
   attr_reader :username
@@ -7,8 +8,8 @@ class Tweet
   # def self.new(args*)
   #   t = Object.new()
   #   # some stuff to make the args what we want
-  #   object.initialize(text, username)
-  #   object
+  #   t.initialize(text, username)
+  #   t
   # end
 
   def initialize(text, username)
@@ -17,6 +18,7 @@ class Tweet
 
     @@all << self
   end
+
 
   def self.delete_tweet(text_to_delete, username_to_delete)
     tweet_to_delete = @@all.find do |t|
