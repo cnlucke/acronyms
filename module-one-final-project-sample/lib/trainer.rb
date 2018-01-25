@@ -9,7 +9,7 @@ class Trainer < ActiveRecord::Base
   end
 
   def catch_pokemon
-    pokemon_hash = Adapter.get_random_pokemon
+    pokemon_hash = PokemonApiAdapter.random_pokemon
     newPokemon = Pokemon.find_or_create_through_hash(pokemon_hash)
     newPokemon.tap{|pokemon| self.pokemons << pokemon}
   end
