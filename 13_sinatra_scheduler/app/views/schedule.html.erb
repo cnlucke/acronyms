@@ -1,0 +1,9 @@
+<h1>Scheduled Courses</h1>
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <p><%= course.name %> with Professor <%= course.professor %></p>
+      <p>Credits: <%= course.credits %></p>
+    </li>
+  <% end %>
+</ul>

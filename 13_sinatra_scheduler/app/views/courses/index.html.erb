@@ -1,0 +1,17 @@
+<h1>All Courses</h1>
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <p><%= course.name %> with Professor <%= course.professor %></p>
+      <p>Credits: <%= course.credits %></p>
+      <div style="display:inline-flex">
+      <form style="margin-right:10px" action="/schedule/<%= course.id %>" method="post">
+        <input type="submit" value="Add to Schedule">
+      </form>
+      <form action="/schedule/<%= course.id %>" method="delete">
+        <input type="submit" value="Remove from Schedule">
+      </form>
+    </div>
+    </li>
+  <% end %>
+</ul>
