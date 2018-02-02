@@ -1,0 +1,24 @@
+<!-- <%= form_with(model: admin, local: true) do |form| %>
+  <% if admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %> -->
+
+<form action="/admins" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="admin[name]">
+  <input type="hidden" name="authenticity_token" value="token_value">
+  <input type="submit" value="Submit">
+</form>
