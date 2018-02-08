@@ -1,0 +1,7 @@
+<%= @pet.name %>
+<%= @pet.owner.name %>
+
+<%= form_for @pet do |f| %>
+ <%= f.collection_select :owner_id, Owner.all, :id, :name %>
+ <%= f.submit %>
+<% end %>
