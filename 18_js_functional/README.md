@@ -1,4 +1,3 @@
-by composing pure functions, avoiding shared state, mutable data, and side-effects. Functional programming is declarative rather than imperative,
 
 
 ## Functional programming
@@ -54,6 +53,14 @@ class Person
   end
 end
 
+johann = Person.new("Johann", "Kerr")
+
+johann.full_name # "Johann Kerr"
+
+johann.first_name = "Beefy"
+
+
+johann.full_name # "Beefy Kerr"
 
 ```
 
@@ -67,9 +74,23 @@ Clearly these two functions share the internal state of first_name and last_name
 ````
 
 function addProp(obj, key, newProp) {
-  obj[key] = newProp
-  return obj
+  let newObj = obj
+  newObj[key] = newProp
+  return newObj
 }
+
+
+function altProp(obj, key, newProp) {
+  let newObj = Object.assign({}, obj)
+    newObj[key] = newProp
+    return newObj
+}
+
+
+
+let j = {name: "Johann"}
+
+addProp(j, "profession", "teacher") // { name: "Johann", profession: "Teacher"}
 
 ```
 
