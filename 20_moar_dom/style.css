@@ -1,0 +1,14 @@
+.comment-container {
+	background: pink;
+}
+.comment-form {
+	padding: 10px 30px;
+}
+.comments {
+	list-style-type: none;
+	padding: 0;
+}
+.comments li {
+	padding: 10px 30px;
+	background: #00000022
+}
