@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flatiron Task Lister</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="main-content">
+    <h1>Flatiron Task Lister</h1>
+
+    <form id="create-list-form" action="#" method="post">
+      <label for="new-list-title">Add a new list:</label>
+      <input type="text" id="new-list-title" name="new-list-title" placeholder="title">
+      <input type="submit" value="Create New List">
+    </form><!-- #create-list-form -->
+
+    <form id="create-task-form" action="#" method="post">
+      <label for="parent-list">Select List:</label>
+      <select id="parent-list" name="parent-list"></select>
+      <label for="new-task-description">Task description:</label>
+      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <label for="new-task-priority">Priority level:</label>
+      <input type="text" id="new-task-priority" name="new-task-priority" placeholder="priority">
+      <input type="submit" value="Create New Task">
+    </form><!-- #create-task-form -->
+
+    <section id="lists"></section>
+
+    <script src="src/components/task.js"></script>
+    <script src="src/components/list.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/index.js"></script>
+  </div><!-- #main-content -->
+</body>
+</html>
