@@ -1,0 +1,10 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+#animal-list {
+  display: grid;
+  grid-template-columns: 2fr;
+  margin-left: 10px;
+}
