@@ -27,10 +27,16 @@ class AcronymContainer extends Component {
     });
   };
 
+  filterAcronyms = () => {
+    return this.state.acronyms.filter((acronym) => {
+      return acronym.short.toLowerCase().includes(this.props.search.toLowerCase()) || acronym.long.toLowerCase().includes(this.props.search.toLowerCase())
+    })
+  }
+
   render() {
     return (
       <div className="row">
-        <AcronymList acronyms={this.state.acronyms} />
+        <AcronymList acronyms={this.filterAcronyms()} />
         <AcronymForm handleAdd={this.addAcronym} />
       </div>
     );

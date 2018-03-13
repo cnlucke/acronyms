@@ -6,7 +6,7 @@ class NavBar extends Component {
       <nav className="navbar navbar-inverse">
         <a className="navbar-brand">Acronymizer</a>
         <form className="form-inline">
-          <input
+          <input onChange={this.props.handleSearch}
             className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
