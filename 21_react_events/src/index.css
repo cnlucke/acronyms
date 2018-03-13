@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.lightswitch {
+  min-height: 200px;
+  flex-grow: 1;
+  min-width: 200px;
+  background: navy;
+}
+.lightswitch, .lightswitch::before{
+  transition: background .5s, color 1s;
+}
+.lightswitch::before {
+  content: "@";
+  width: 50px;
+  height: 20px;
+  display: block;
+  border-radius: 0 0 50% 50%;
+  background: blue;
+  color: navy;
+  margin: auto;
+}
+.lightswitch.on {
+  background: pink;
+}
+
+.lightswitch.on::before {
+  background: white;
+  color: yellow;
+  }
+  .switch {
+    margin-top: 100px;
+  }
